@@ -57,5 +57,5 @@ hs_err_pid*
 log/
 target/
 mvnw
-mvn.cmd
+mvnw.cmd
 .mvn
