@@ -56,3 +56,6 @@ hs_err_pid*
 #maven build target files - ignore staging test
 log/
 target/
+mvnw
+mvn.cmd
+.mvn
