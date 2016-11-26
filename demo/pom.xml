@@ -9,25 +9,26 @@
 	<packaging>jar</packaging>
 
 	<name>demo</name>
-	<description>Demo project for Spring Boot</description>
-
+	<description>Demo project for Spring Boot</description>	
+	
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.4.2.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-
+	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<org.springframework-version>1.4.2.RELEASE</org.springframework-version>
 		<java.version>1.8</java.version>
-	</properties>
-
+	</properties>	
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
 
 		<dependency>
@@ -42,6 +43,14 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<!-- 자바코드를 수정했을 때 어플리케이션을 실행한채로 반영-->
+				<dependencies>
+					<dependency>
+					    <groupId>org.springframework</groupId>
+					    <artifactId>springloaded</artifactId>
+					    <version>${org.springframework-version}</version>
+					</dependency>
+				</dependencies>
 			</plugin>
 		</plugins>
 	</build>
